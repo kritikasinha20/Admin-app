@@ -1,10 +1,14 @@
 import React from 'react'
+import { Container } from 'react-bootstrap';
 import Header from '../Header';
 const Layouts = (props) => {
     return (
         <>
         <Header/>
-            {props.children}
+        <Container>
+        {props.children}
+        </Container>
+            
             </>
     )
 }

@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
+import Switch from 'react-bootstrap/esm/Switch';
+import { BrowserRouter as Router,Route} from 'react-router-dom';
 import './App.css';
-import Layouts from './Components/Layouts';
+import Home from './Containers/Home'
+import SignIn from './Containers/SignIn';
+import SignUp from './Containers/SignUp';
+
+
 function App() {
   return (
     <div className="App">
-      <Layouts>
-        <h1>Hello</h1>
-      </Layouts>
+     <Router>
+       <Switch>
+         <Route path="/" exact component = {Home}/>
+         <Route path="/signin" exact component = {SignIn}/>
+         <Route path="/signup" exact component = {SignUp}/>
+       </Switch>
+     </Router>
     </div>
   );
 }
